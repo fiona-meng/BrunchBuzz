@@ -3,12 +3,15 @@ from flask import Flask
 from flask import render_template
 from flask import Response, request, jsonify, redirect, url_for
 import json
+import os
+
 
 app = Flask(__name__)
 
-# Load restaurant data once
-brunch_data = json.load(open('yelp_brunch_new_york_city.json'))
 
+# Load restaurant data once - using absolute path
+json_path = os.path.join(os.path.dirname(__file__), 'yelp_brunch_new_york_city.json')
+brunch_data = json.load(open(json_path))
 
 @app.route('/')
 def homepage():
