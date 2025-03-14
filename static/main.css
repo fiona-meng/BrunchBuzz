@@ -1,0 +1,1039 @@
+.sour-gummy {
+  font-family: "Sour Gummy", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;  /* or specify a numeric weight like 400 */
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.body {
+  font-family: "Roboto", sans-serif;
+}
+
+
+.image-container {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  left: 0;
+  right: 0;
+}
+
+.image-container img {
+  width: 100%;
+  height: 30vh; 
+  display: block;
+  object-fit: cover;
+  opacity: 0.3;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-90%, 0%);
+  text-align: center;
+  color: Black;
+  /* font-family: "Sour Gummy", sans-serif; */
+}
+.overlay-text h1 {
+  font-size: 5rem;
+}
+
+
+.navbar-brand {
+  color: Black;
+  font-family: "Sour Gummy", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;  /* or specify a numeric weight like 400 */
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  font-size: 1.8rem;
+  margin-right: 30px;
+  margin-bottom: 0;
+}
+
+.restaurant-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.dish-tag {
+  display: inline-block;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 16px;
+  padding: 4px 12px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: #495057;
+}
+
+.restaurant-listing{
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.restaurant-listing-text{
+  padding-left: 30px;
+}
+
+.cuisine-tag {
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+.reviews-container {
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.comment-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  font-size: 5px;
+  padding-left: 20px;
+}
+
+.reviews-text {
+  padding-left: 2px;
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.rating{
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.rating-text {
+  padding-left: 2px;
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.price {
+  padding-left: 10px;
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.restaurant-address{
+  padding-left: 10px;
+}
+
+.restaurant-cuisine{
+  padding-left: 10px;
+}
+
+.popular-restaurants-header{
+  padding-left: 50px;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.highlight{
+  font-weight: bold;
+  color: #cea338
+}
+
+.search-results-header{
+  padding-left: 50px;
+  font-size: 3rem;
+}
+
+.search-results-header-no-results{
+  padding-left: 50px;
+  padding-top: 400px;
+  font-size: 4rem;
+}
+
+.search-results-count{
+  padding-left: 50px;
+  font-size: 2rem;
+  padding-bottom: 150px !important;
+}
+
+.header-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-image: url("https://offloadmedia.feverup.com/secretnyc.co/wp-content/uploads/2022/01/19131704/ezgif.com-webp-to-jpg-converted-2-1024x684.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: #f5f5f5; /* Fallback color */
+}
+
+.header-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5); /* White overlay with 50% opacity */
+  z-index: 1;
+}
+
+.header-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  padding: 0 20px;
+  z-index: 2; /* Make sure content is above the overlay */
+}
+
+.header-content h1 {
+  font-size: 55px;
+  color: #000; /* Black text */
+  margin-bottom: 10px;
+  padding-top: 200px;
+  padding-right: 1000px;
+  padding-left: 0px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-style: italic;
+
+}
+
+.nav-link {
+  color: Black;
+  font-family: "Sour Gummy", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;  /* or specify a numeric weight like 400 */
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+  padding-left: 40px !important;
+  font-size: 1.5rem;
+}
+
+.navbar2{
+  padding-top: 0px !important;
+}
+
+.navbar{
+  background-color: #FCDE70;
+  padding: 8px 0;
+}
+
+
+#add-restaurant-container .alert {
+  margin-bottom: 20px;
+}
+
+/* Form styling for the restaurant form */
+#add-restaurant-container .card {
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+#add-restaurant-container .card-header {
+  background: linear-gradient(135deg, #f8b500 0%, #FCDE70 100%);
+  color: #212529;
+  font-weight: bold;
+}
+
+#add-restaurant-container .section-title {
+  color: #495057;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+
+/* Form control focus styling - yellow highlight */
+.form-control:focus {
+  border-color: #FCDE70; /* Brighter yellow matching your navbar */
+  box-shadow: 0 0 0 0.25rem rgba(252, 222, 112, 0.25); /* Soft yellow glow */
+  outline: none;
+}
+
+/* Make select dropdowns also use the same focus style */
+select.form-control:focus {
+  border-color: #FCDE70;
+  box-shadow: 0 0 0 0.25rem rgba(252, 222, 112, 0.25);
+}
+
+/* Override Bootstrap's default blue focus style */
+.btn:focus, .btn.focus {
+  box-shadow: 0 0 0 0.25rem rgba(252, 222, 112, 0.5) !important;
+}
+
+/* Keep the existing specific styles for the restaurant container */
+#add-restaurant-container .form-control:focus {
+  border-color: #FCDE70;
+  box-shadow: 0 0 0 0.25rem rgba(252, 222, 112, 0.35);
+}
+
+#add-restaurant-container .btn-primary {
+  background-color: #f8b500;
+  border-color: #f8b500;
+  transition: all 0.3s ease;
+}
+
+#add-restaurant-container .btn-primary:hover {
+  background-color: #e0a500;
+  border-color: #e0a500;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#image-preview-container {
+  border: 1px dashed #ced4da;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#image-preview {
+  max-height: 130px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.warning-message {
+  color: #cea338;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
+
+/* Enhanced success message styling */
+.alert-success {
+  background: linear-gradient(135deg, #FCDE70 0%, #f8b500 100%);
+  color: #333;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+  animation: slideInDown 0.5s ease-out, pulse 2s infinite ease-in-out;
+  font-weight: 500;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+}
+
+.alert-success::before {
+  content: "✓";
+  font-size: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #333;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.alert-success a {
+  color: #333;
+  margin-left: 10px;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 3px 10px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.alert-success a:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 4px 15px rgba(248, 181, 0, 0.1);
+  }
+  50% {
+    box-shadow: 0 4px 20px rgba(248, 181, 0, 0.3);
+  }
+  100% {
+    box-shadow: 0 4px 15px rgba(248, 181, 0, 0.1);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+h4.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.75rem;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  padding-left: 10px;
+}
+#add-restaurant-form{
+  padding-top: 100px;
+}
+
+/* Restaurant Detail Page Styles */
+.restaurant-detail {
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.detail-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.detail-header {
+  margin-bottom: 15px;
+}
+
+.restaurant-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.cuisine {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.rating-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.rating {
+  display: inline-flex;
+  align-items: center;
+}
+
+.rating .text-warning {
+  color: #ffb100 !important;
+  font-size: 1.2rem;
+}
+
+.rating-text {
+  margin-left: 5px;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+.comment-icon {
+  margin-right: 5px;
+}
+
+.reviews-text {
+  margin-right: 15px;
+}
+
+.price {
+  color: #555;
+  font-weight: 500;
+}
+
+.detail-section {
+  margin-bottom: 25px;
+}
+
+.detail-section h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.detail-sidebar {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.contact-info {
+  font-size: 1rem;
+}
+
+.location-info, .phone-info {
+  display: flex;
+  align-items: flex-start;
+}
+
+.location-info i, .phone-info i {
+  margin-right: 10px;
+  color: #555;
+  margin-top: 3px;
+}
+
+@media (max-width: 768px) {
+  .restaurant-title {
+    font-size: 2rem;
+  }
+  
+  .detail-sidebar {
+    margin-top: 30px;
+  }
+}
+
+/* Show More/Less Functionality */
+.show-more-btn, .show-less-btn {
+  color: #cea338;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.show-more-btn:hover, .show-less-btn:hover {
+  text-decoration: underline;
+  color: #b8922f;
+}
+
+.description-text {
+  margin-bottom: 5px;
+}
+
+/* Dish Pills */
+.dish-pill {
+  display: inline-block;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 50px;
+  padding: 8px 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #495057;
+  transition: all 0.2s ease;
+}
+
+.dish-pill:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.popular-dishes-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.submit-button{
+  background-color: #FCDE70;
+  border-color: #FCDE70;
+  color: Black;
+}
+
+.submit-button:hover{
+  background-color: #e0a500;
+  border-color: #e0a500;
+  transform: translateY(-2px);
+}
+
+/* Search bar styling */
+.search-container {
+  max-width: 500px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.search-inputs {
+  display: flex;
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid #e9ecef;
+  flex-grow: 1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-term {
+  border: none;
+  flex-grow: 1;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.search-button {
+  width: 45px !important;
+  height: 45px !important;
+  border-radius: 50%;
+  background-color: #FCDE70;
+  color: black;
+  border: none;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  flex-shrink: 0 !important;
+}
+
+.search-button:hover {
+  background-color: #f8b500;
+  transform: translateY(-2px);
+}
+
+.add-button{
+  width: 45px !important;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #FCDE70;
+  color: black;
+  border: none;
+  margin-left: 0px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  margin-left: 10px;
+}
+
+.add-button:hover {
+  background-color: #f8b500;
+  transform: translateY(-2px);
+  color: black;
+  text-decoration: none;
+}
+
+.search-inputs{
+  width: 400px;
+  height: 45px;
+  font-size: 20px;
+}
+
+.search-term{
+  font-size: 20px;
+}
+
+.website-title:hover{
+  color: black;
+  text-decoration: none;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: transparent;
+}
+
+/* Navbar layout adjustments */
+.container-fluid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: auto;
+}
+
+/* Maintain responsive layouts */
+@media (max-width: 992px) {
+  .container-fluid {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .navbar-brand {
+    margin-bottom: 10px;
+  }
+  
+  .search-container {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+/* Edit button styling */
+.edit-button {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  color: #555;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.edit-button i {
+  margin-right: 5px;
+}
+
+.edit-button:hover {
+  background-color: #FCDE70;
+  color: #333;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Confirmation dialog styling */
+.confirmation-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+}
+
+.dialog-content {
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+.dialog-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.dialog-message {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.dialog-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.dialog-buttons button {
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.btn-cancel {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  color: #333;
+}
+
+.btn-confirm {
+  background-color: #FCDE70;
+  border: none;
+  color: #333;
+}
+
+.btn-cancel:hover {
+  background-color: #e9ecef;
+}
+
+.btn-confirm:hover {
+  background-color: #f8b500;
+}
+
+.action-buttons {
+  margin-bottom: 50px;
+}
+
+.edit-button{
+  background-color: #FCDE70;
+  border-color: #FCDE70;
+  color: white;
+  margin-left: 235px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  height: 50px;
+  text-align: center;
+}
+
+.search-result-image{
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.search-result-image:hover{
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+.success-exit {
+  transition: all 0.3s ease-out;
+  position: relative;
+}
+
+.discard-button{
+  height: 50px;
+  background-color: #FCDE70;
+  border-color: #FCDE70;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.discard-button:hover{
+  background-color: #e0a500;
+  transform: translateY(-2px);
+}
+
+.edit-submit-button{
+  height: 50px;
+  background-color: #FCDE70;
+  border-color: #FCDE70;
+  color: black;
+  margin-left: 0px;
+  margin-top: 0px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.edit-submit-button:hover{
+  background-color: #e0a500;
+  transform: translateY(-2px);
+}
+
+/* Add hover effects to match the focus effects */
+.form-control:hover {
+  border-color: #FCDE70;
+  transition: border-color 0.2s ease;
+}
+
+/* Make textarea and select also use the same hover style */
+textarea.form-control:hover,
+select.form-control:hover {
+  border-color: #FCDE70;
+  transition: border-color 0.2s ease;
+}
+
+/* Ensure edit form has consistent styling with add form */
+#edit-restaurant-form .form-control:hover,
+#edit-restaurant-form .form-control:focus {
+  border-color: #FCDE70;
+  transition: all 0.3s ease;
+}
+
+#edit-restaurant-form select.form-control:hover,
+#edit-restaurant-form textarea.form-control:hover {
+  border-color: #FCDE70;
+}
+
+/* Enhanced Edit Form Styling */
+#edit-restaurant-form {
+  /* transition: all 0.3s ease; */
+  border-radius: 12px;
+  padding: 30px;
+  position: relative;
+  /* overflow: hidden; */
+}
+
+#edit-restaurant-form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  /* background: linear-gradient(to right, #FCDE70, #f8b500); */
+}
+
+/* Enhanced Button Styles */
+.discard-button {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.discard-button:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.discard-button:active {
+  transform: scale(0.97);
+}
+
+.edit-submit-button {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(248, 181, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.edit-submit-button:hover {
+  box-shadow: 0 6px 20px rgba(248, 181, 0, 0.3);
+}
+
+.edit-submit-button:active {
+  transform: scale(0.97);
+}
+
+/* Fancy Custom Confirm Dialog */
+.custom-confirm-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1060;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.custom-confirm-dialog.active {
+  opacity: 1;
+}
+
+.confirm-dialog-content {
+  background-color: white;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 400px;
+  width: 90%;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.custom-confirm-dialog.active .confirm-dialog-content {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.confirm-dialog-title {
+  color: #333;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.confirm-dialog-message {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.confirm-dialog-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.confirm-btn-cancel {
+  background-color: #f0f0f0;
+  color: #555;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.confirm-btn-confirm {
+  background-color: #FCDE70;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.confirm-btn-cancel:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+.confirm-btn-confirm:hover {
+  background-color: #f8b500;
+  transform: translateY(-2px);
+}
+
+/* Form Input Focus Effects */
+#edit-restaurant-form .form-control {
+  transition: all 0.3s ease;
+}
+
+#edit-restaurant-form .form-control:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(252, 222, 112, 0.2);
+}
+
+/* Loading spinner for submit button */
+.btn-spinner {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 8px;
+  vertical-align: middle;
+  border: 0.2em solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spinner-border .75s linear infinite;
+}
+
+@keyframes spinner-border {
+  to { transform: rotate(360deg); }
+}
+
+/* Success message animation */
+@keyframes scaleIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+#alert-container .alert-success {
+  animation: scaleIn 0.3s ease forwards;
+}

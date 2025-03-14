@@ -1,0 +1,15 @@
+{% extends "navbar.html" %}
+
+{% block content %}
+<script>
+    // Pass restaurant data to JavaScript
+    let results = {{ results | tojson }};
+    let count = {{ count | tojson }};
+    let search_query = {{search_query | tojson}};
+</script>
+<script src="{{ url_for('static', filename='search_result.js') }}"></script>
+
+<div id="display-container">
+    <!-- Results will be displayed here by search_result.js -->
+</div>
+{% endblock %} 

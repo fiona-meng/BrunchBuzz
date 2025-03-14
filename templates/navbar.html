@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="data:,">
+
+    <!-- jQuery -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>  
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+    <!-- Font Awesome for star icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Custom CSS and JS -->
+    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+    <script src="{{url_for('static', filename='utils.js')}}"></script>
+    <script src="{{url_for('static', filename='search_result.js')}}"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=location_on,mode_comment" />
+    
+
+
+    <title>BrunchBuzz NYC</title>
+    
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container-fluid">
+        <div class="d-flex align-items-center">
+          <a class="navbar-brand mr-3 website-title" href="/">BrunchBuzz NYC</a>
+          
+          <div style="display: flex; align-items: center;">
+            <form class="d-flex search-container mr-2" id="search-form" action="/search_results" method="GET">
+              <div class="search-inputs">
+                <input class="form-control search-term" type="search" placeholder="Search restaurants..." 
+                       aria-label="Search" id="search-input" name="query">
+              </div>
+            </form>
+            <button class="search-button" type="submit" form="search-form">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+          
+          <a href="/add" class="add-button rounded-circle">
+            <i class="fas fa-plus"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="header-container">
+      <!-- Background image will go here via CSS -->
+      <div class="header-content">
+        <h1>Top Brunch Spots in NYC</h1>
+      </div>
+    </div>
+
+
+
+    <!-- Main Content -->
+    <div class="container">   
+      {% block content %}
+      {% endblock %}
+    </div>
+  </body>
+</html>
+
+
+
+

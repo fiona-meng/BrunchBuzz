@@ -1,0 +1,16 @@
+{% extends "navbar.html" %}
+
+
+{% block content %}
+<script>
+    // Pass restaurant data to JavaScript
+    let restaurantData = {{ restaurants | tojson }};
+</script>
+<script src="{{ url_for('static', filename='homepage.js') }}"></script>
+
+
+<div id="display-container">
+</div>
+
+
+{% endblock %}

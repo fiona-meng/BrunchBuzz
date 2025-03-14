@@ -1,0 +1,22 @@
+{% extends "navbar.html" %}
+
+{% block content %}
+<script>
+    let restaurant = {{ restaurant | tojson }};
+    let brunch_data = {{ brunch_data | tojson }};
+</script>
+<script src="{{ url_for('static', filename='view.js') }}"></script>
+<script src="{{ url_for('static', filename='edit.js') }}"></script>
+
+<div id="display-container">
+</div>
+
+<!-- Update the similar restaurants container to match homepage style -->
+<div id="similar-restaurants-container" class="mt-5">
+  <h2 class="section-title">Similar Restaurants You May Like</h2>
+  <hr>
+  <div id="similar-restaurants">
+    <!-- Similar restaurants will be loaded here by JavaScript -->
+  </div>
+</div>
+{% endblock %}

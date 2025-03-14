@@ -1,0 +1,141 @@
+{% extends "navbar.html" %}
+
+{% block content %}
+<script src="{{ url_for('static', filename='edit.js') }}"></script>
+
+<div class="container mt-4" id="edit-restaurant-container">
+  <div id="alert-container"></div>
+  
+  <form id="edit-restaurant-form">
+    <input type="hidden" id="restaurant-id" value="{{ restaurant.id }}">
+    
+    <div class="section-title mb-3">
+      <h4><i class="fas fa-utensils mr-2"></i>Basic Information</h4>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="title">Restaurant Name*</label>
+          <input type="text" class="form-control" id="title" name="title" value="{{ restaurant.title }}" required>
+          <div id="title-warning" class="warning-message"></div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="cuisine">Cuisine (comma separated)*</label>
+          <input type="text" class="form-control" id="cuisine" name="cuisine" value="{{ restaurant.cuisine|join(', ') }}" required>
+          <div id="cuisine-warning" class="warning-message"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="description">Description*</label>
+      <textarea class="form-control" id="description" name="description" rows="3" required>{{ restaurant.description }}</textarea>
+      <div id="description-warning" class="warning-message"></div>
+    </div>
+    
+    <!-- Location & Contact Section -->
+    <div class="section-title mt-4 mb-3">
+      <h4><i class="fas fa-map-marker-alt mr-2"></i>Location & Contact</h4>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-8">
+        <div class="form-group">
+          <label for="address">Address*</label>
+          <input type="text" class="form-control" id="address" name="address" value="{{ restaurant.address }}" required>
+          <div id="address-warning" class="warning-message"></div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="phone">Phone*</label>
+          <input type="tel" class="form-control" id="phone" name="phone" value="{{ restaurant.phone }}" required>
+          <div id="phone-warning" class="warning-message"></div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Details Section -->
+    <div class="section-title mt-4 mb-3">
+      <h4><i class="fas fa-info-circle mr-2"></i>Restaurant Details</h4>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="rating">Rating (0-5)*</label>
+          <input type="number" class="form-control" id="rating" name="rating" min="0" max="5" step="0.1" value="{{ restaurant.rating }}" required>
+          <div id="rating-warning" class="warning-message"></div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="price">Price*</label>
+          <select class="form-control" id="price" name="price">
+            <option value="$" {% if restaurant.price == '$' %}selected{% endif %}>$ (Inexpensive)</option>
+            <option value="$$" {% if restaurant.price == '$$' %}selected{% endif %}>$$ (Moderate)</option>
+            <option value="$$$" {% if restaurant.price == '$$$' %}selected{% endif %}>$$$ (Expensive)</option>
+            <option value="$$$$" {% if restaurant.price == '$$$$' %}selected{% endif %}>$$$$ (Very Expensive)</option>
+          </select>
+          <div id="price-warning" class="warning-message"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="popular_dishes">Popular Dishes (comma separated)*</label>
+      <input type="text" class="form-control" id="popular_dishes" name="popular_dishes" value="{{ restaurant.popular_dishes|join(', ') }}" required>
+      <div id="popular_dishes-warning" class="warning-message"></div>
+    </div>
+    
+    <!-- Image Section -->
+    <div class="section-title mt-4 mb-3">
+      <h4><i class="fas fa-image mr-2"></i>Restaurant Image</h4>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-8">
+        <div class="form-group">
+          <label for="image">Image URL</label>
+          <input type="text" class="form-control" id="image" name="image" value="{{ restaurant.image }}" onchange="previewImage()" required>
+          <div id="image-warning" class="warning-message"></div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div id="image-preview-container" class="text-center">
+          <img id="image-preview" src="{{ restaurant.image }}" class="img-fluid rounded" style="max-height: 150px;" onerror="this.src='https://via.placeholder.com/150?text=Invalid+URL'">
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center mt-4">
+      <div class="mb-3 d-flex justify-content-end">
+        <button type="button" id="discard-changes" class="btn discard-button" style="margin-right: 20px;">Discard</button>
+        <button type="submit" class="btn edit-submit-button">Update</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+var restaurant = JSON.parse('{{ restaurant | tojson | safe }}');
+
+function previewImage() {
+  const imageUrl = document.getElementById('image').value;
+  const imagePreview = document.getElementById('image-preview');
+  
+  if (imageUrl && imageUrl.trim() !== '') {
+    imagePreview.src = imageUrl;
+    imagePreview.onerror = function() {
+      imagePreview.src = 'https://via.placeholder.com/150?text=Invalid+URL';
+    };
+  } else {
+    imagePreview.src = 'https://via.placeholder.com/150?text=Preview';
+  }
+}
+</script>
+
+{% endblock %} 

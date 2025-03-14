@@ -1,0 +1,135 @@
+{% extends "navbar.html" %}
+
+{% block content %}
+<script src="{{url_for('static', filename='add.js')}}"></script>
+
+<div id="add-restaurant-container" class="container mt-4">
+  <!-- Success message will appear here when a restaurant is added -->
+  
+  <form id="add-restaurant-form">
+    <div class="section-title mb-3">
+      <h4><i class="fas fa-utensils mr-2"></i>Basic Information</h4>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="title">Restaurant Name*</label>
+          <input type="text" class="form-control" id="title" placeholder="Enter restaurant name">
+          <div id="title-warning" class="warning-message"></div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="cuisine">Cuisine (comma separated)*</label>
+          <input type="text" class="form-control" id="cuisine" placeholder="E.g. American, Brunch, Italian">
+          <div id="cuisine-warning" class="warning-message"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="description">Description*</label>
+      <textarea class="form-control" id="description" rows="3" placeholder="Describe the restaurant"></textarea>
+      <div id="description-warning" class="warning-message"></div>
+    </div>
+    
+    <!-- Location & Contact Section -->
+    <div class="section-title mt-4 mb-3">
+      <h4><i class="fas fa-map-marker-alt mr-2"></i>Location & Contact</h4>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-8">
+        <div class="form-group">
+          <label for="address">Address*</label>
+          <input type="text" class="form-control" id="address" placeholder="Full address">
+          <div id="address-warning" class="warning-message"></div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="phone">Phone*</label>
+          <input type="text" class="form-control" id="phone" placeholder="Phone number">
+          <div id="phone-warning" class="warning-message"></div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Details Section -->
+    <div class="section-title mt-4 mb-3">
+      <h4><i class="fas fa-info-circle mr-2"></i>Restaurant Details</h4>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="rating">Rating (0-5)*</label>
+          <input type="number" class="form-control" id="rating" placeholder="Enter rating" min="0" max="5" step="0.1">
+          <div id="rating-warning" class="warning-message"></div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="price">Price*</label>
+          <select class="form-control" id="price">
+            <option value="">Select price range</option>
+            <option value="$">$ (Inexpensive)</option>
+            <option value="$$">$$ (Moderate)</option>
+            <option value="$$$">$$$ (Expensive)</option>
+            <option value="$$$$">$$$$ (Very Expensive)</option>
+          </select>
+          <div id="price-warning" class="warning-message"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="popular_dishes">Popular Dishes (comma separated)*</label>
+      <input type="text" class="form-control" id="popular_dishes" placeholder="E.g. French Toast, Eggs Benedict, Pancakes">
+      <div id="popular_dishes-warning" class="warning-message"></div>
+    </div>
+    
+    <!-- Image Section -->
+    <div class="section-title mt-4 mb-3">
+      <h4><i class="fas fa-image mr-2"></i>Restaurant Image</h4>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-8">
+        <div class="form-group">
+          <label for="image">Image URL</label>
+          <input type="text" class="form-control" id="image" placeholder="Enter image URL" onchange="previewImage()">
+          <div id="image-warning" class="warning-message"></div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div id="image-preview-container" class="text-center">
+          <img id="image-preview" src="https://via.placeholder.com/150?text=Preview" class="img-fluid rounded" style="max-height: 150px;">
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center mt-4">
+      <button id="submit" class="btn btn-primary btn-lg px-5 submit-button">Add Restaurant</button>
+    </div>
+  </form>
+</div>
+
+<script>
+function previewImage() {
+  const imageUrl = document.getElementById('image').value;
+  const imagePreview = document.getElementById('image-preview');
+  
+  if (imageUrl && imageUrl.trim() !== '') {
+    imagePreview.src = imageUrl;
+    imagePreview.onerror = function() {
+      imagePreview.src = 'https://via.placeholder.com/150?text=Invalid+URL';
+    };
+  } else {
+    imagePreview.src = 'https://via.placeholder.com/150?text=Preview';
+  }
+}
+</script>
+
+{% endblock %} 
