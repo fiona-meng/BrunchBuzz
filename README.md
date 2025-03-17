@@ -6,6 +6,8 @@ BrunchBuzz is a web application designed to help users discover high-rated brunc
 ## Live Demo
 Visit the live application at: [https://brunch-buzz.vercel.app/](https://brunch-buzz.vercel.app/)
 
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/xZN_Lz1YhFg/0.jpg)](https://www.youtube.com/watch?v=xZN_Lz1YhFg)
+
 ## Project Description
 This Flask-based CRUD application allows users to:
 - Explore featured brunch spots on the homepage
