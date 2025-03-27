@@ -12,9 +12,13 @@ function displayTopRestaurants() {
             break;
         }
     }
-    
-    // Display header
-    $("#display-container").append("<span class='popular-restaurants-header'>Popular Restaurants</span>");
+    $("#display-container").append(`
+      <div class="section-header">
+        <div class="header-line"></div>
+        <h2 class="popular-restaurants-header">Popular Restaurants</h2>
+        <p class="header-subtitle">Discover NYC's most loved brunch destinations</p>
+      </div>
+    `);
     
     // Create container for listings
     let listContainer = $("<div class='restaurant-listings'></div>");

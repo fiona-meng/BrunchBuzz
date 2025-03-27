@@ -1,15 +1,12 @@
-.sour-gummy {
-  font-family: "Sour Gummy", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: normal;  /* or specify a numeric weight like 400 */
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
+body {
+  background-color: #fff5e4;
+  color: #050315;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  font-size: 13px;
+  padding: 10px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
-
-.body {
-  font-family: "Roboto", sans-serif;
-}
-
 
 .image-container {
   position: relative;
@@ -40,17 +37,13 @@
   font-size: 5rem;
 }
 
-
 .navbar-brand {
   color: Black;
-  font-family: "Sour Gummy", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: normal;  /* or specify a numeric weight like 400 */
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
   font-size: 1.8rem;
-  margin-right: 30px;
+  /* margin-right: 30px; */
   margin-bottom: 0;
+  margin-left: 0;
+
 }
 
 .restaurant-title {
@@ -60,7 +53,7 @@
 
 .dish-tag {
   display: inline-block;
-  background-color: #f8f9fa;
+  background-color: #C1D8C3;
   border: 1px solid #e9ecef;
   border-radius: 16px;
   padding: 4px 12px;
@@ -172,17 +165,6 @@
   background-color: #f5f5f5; /* Fallback color */
 }
 
-.header-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.5); /* White overlay with 50% opacity */
-  z-index: 1;
-}
-
 .header-content {
   position: absolute;
   top: 50%;
@@ -223,7 +205,7 @@
 }
 
 .navbar{
-  background-color: #FCDE70;
+  background-color: FFF5E4;
   padding: 8px 0;
 }
 
@@ -472,7 +454,7 @@ h4.section-title {
 }
 
 .detail-sidebar {
-  background-color: #f9f9f9;
+  background-color: #fff5e4;
   padding: 20px;
   border-radius: 8px;
   margin-top: 20px;
@@ -525,8 +507,8 @@ h4.section-title {
 /* Dish Pills */
 .dish-pill {
   display: inline-block;
-  background-color: #f8f9fa;
-  border: 1px solid #e9ecef;
+  background-color: #fff5e4;
+  border: 1px solid #050315;
   border-radius: 50px;
   padding: 8px 20px;
   margin-right: 10px;
@@ -563,25 +545,20 @@ h4.section-title {
 
 /* Search bar styling */
 .search-container {
-  max-width: 500px;
-  width: 100%;
-  margin-right: auto;
-  margin-left: 0;
+  max-width: 700px;
+  height: 60px;
 }
 
 .search-inputs {
   display: flex;
-  background-color: white;
   border-radius: 4px;
-  border: 1px solid #e9ecef;
-  flex-grow: 1;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  margin-left: 300px;
+  height: 100%;
 }
 
 .search-term {
   border: none;
-  flex-grow: 1;
-  padding: 8px 12px;
   font-size: 14px;
   border-radius: 4px;
 }
@@ -590,7 +567,7 @@ h4.section-title {
   width: 45px !important;
   height: 45px !important;
   border-radius: 50%;
-  background-color: #FCDE70;
+  background-color: #FFA725;
   color: black;
   border: none;
   margin-left: 10px;
@@ -598,9 +575,9 @@ h4.section-title {
   align-items: center;
   justify-content: center;
   font-size: 18px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
   flex-shrink: 0 !important;
+  margin-left: 100px;
 }
 
 .search-button:hover {
@@ -612,7 +589,7 @@ h4.section-title {
   width: 45px !important;
   height: 45px;
   border-radius: 50%;
-  background-color: #FCDE70;
+  background-color: #FFA725;
   color: black;
   border: none;
   margin-left: 0px;
@@ -621,7 +598,6 @@ h4.section-title {
   align-items: center;
   justify-content: center;
   font-size: 18px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
   margin-left: 10px;
 }
@@ -633,14 +609,35 @@ h4.section-title {
   text-decoration: none;
 }
 
-.search-inputs{
-  width: 400px;
-  height: 45px;
-  font-size: 20px;
+.search-term{
+  font-size: 15px;
+  background-color: #fff5e4;
+  border: 2px solid #050315;
+  padding-left: 4px;
+  border-radius: 10px;
 }
 
-.search-term{
+.search-inputs{
+  width: 600px;
+  height: 50px;
   font-size: 20px;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+#search-input{
+  padding-left: 10px;
+}
+
+.navbar .form-control{
+  padding: 0px;
+  height: 50px;
+  box-shadow: none;
+  border: 2px solid #050315;
+}
+
+.navbar .form-control:hover{
+  border: 2px solid #050315;
 }
 
 .website-title:hover{
@@ -649,36 +646,12 @@ h4.section-title {
 }
 
 .form-control:focus {
+  background-color: #fff5e4;
+  border: 2px solid #050315;
   box-shadow: none;
-  border-color: transparent;
 }
 
-/* Navbar layout adjustments */
-.container-fluid {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  min-height: auto;
-}
 
-/* Maintain responsive layouts */
-@media (max-width: 992px) {
-  .container-fluid {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .navbar-brand {
-    margin-bottom: 10px;
-  }
-  
-  .search-container {
-    width: 100%;
-    max-width: none;
-  }
-}
 
 /* Edit button styling */
 .edit-button {
@@ -1037,3 +1010,51 @@ select.form-control:hover {
 #alert-container .alert-success {
   animation: scaleIn 0.3s ease forwards;
 }
+
+.form-control{
+  background-color: #fff5e4;
+  border: 1px solid #050315;
+}
+
+/* Modern section header styling */
+.section-header {
+  margin: 80px 0 40px;
+  position: relative;
+}
+
+.header-line {
+  height: 1px;
+  width: 80px;
+  background-color: #050315;
+  margin-bottom: 20px;
+}
+
+.popular-restaurants-header {
+  font-size: 2.5rem;
+  font-weight: 600;
+  padding-left: 0;
+  margin-bottom: 12px;
+  position: relative;
+  letter-spacing: -0.02em;
+}
+
+.header-subtitle {
+  font-size: 1.1rem;
+  color: #777;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+
+/* For a more polished look on hover */
+.restaurant-listing {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.restaurant-listing:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  border-color: #eaeaea;
+}
+
+
